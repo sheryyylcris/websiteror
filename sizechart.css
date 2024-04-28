@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    background-color: rgb(230, 224, 224);
+}
+
+.row {
+    display: contents;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.col-5 {
+    flex: 20%;
+    max-width: 20%;
+    padding: 0 15px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.col-5 img {
+    width: 250%;
+    height: auto;
+    margin-left: 145%;
+}
+
+.small-container {
+    color: #333333;
+}
+
+h3 {
+    color: #666666;
+}

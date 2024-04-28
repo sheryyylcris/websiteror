@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family:'Jost', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            color: #666666;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            text-align: center;
+            color: #333333;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .col-4 {
+            flex-basis: calc(25% - 20px);
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .col-4 img {
+            max-width: 100%;
+            border-radius: 8px;
+
+        }
+
+        .col-4 h4 {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        .col-4 p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        .cart-container {
+            margin-top: 40px;
+            padding: 20px;
+        }
+
+        .cart-item {
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+
+        .cart-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .shipping-info {
+            margin-top: 40px;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+        }
+
+        .form-group input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            
+            border-radius: 4px;
+        }
+
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        .form-group button {
+            background-color: #ff4d4d;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        .form-group button:hover {
+            background-color: #ff3333;
+        }
+
+        .cart-total {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="bx bx-menu" id="menu-icon"></div>
+        <a href="#" class="logo"><img src="logo-removebg-preview.png" alt=""></a>
+        <ul class="navbar">
+            <li><a href="drippyco.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#">What's New</a></li>
+            <li><a href="apparel.html">Apparel</a></li>
+        </ul>
+
+        <div class="nav-icon">
+            <a href="buy.html"><i class='bx bx-cart'></i></a>
+            <a href="login.html"><i class='bx bx-user-circle' ></i></a>
+            <a href="#"><i class='bx bx-search' ></i></a>
+        </div>
+    </header>
+    <br><br><br>
+    <br><br><br>
+    <br>
+    <div class="container">
+        <h2>Shopping Cart</h2>
+        <div class="row">
+            <div class="col-4">
+                <div class="cart-item">
+                    <img src="gogetta.png">
+                    <h4>Go Getta Club Tee</h4>
+                    <p>₱750</p>
+                    <button onclick="addToCart('Go Getta Club Tee', 750)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="cart-item">
+                    <img src="zip.png">
+                    <h4>Quarter Zip Tee</h4>
+                    <p>₱750</p>
+                    <button onclick="addToCart('Quarter Zip Tee', 750)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="cart-item">
+                    <img src="gallerydept.png">
+                    <h4>Drippy Dept.</h4>
+                    <p>₱750</p>
+                    <button onclick="addToCart('Drippy Dept.', 750)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="cart-item">
+                    <img src="drippy.png">
+                    <h4>Drippy Dreams</h4>
+                    <p>₱750</p>
+                    <button onclick="addToCart('Drippy Dreams', 750)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="cart-item">
+                    <img src="mesh.png">
+                    <h4>Drippy Monogram Mesh Shorts Black</h4>
+                    <p>₱750</p>
+                    <button onclick="addToCart('Drippy Monogram Mesh Shorts Black', 750)">Add to Cart</button>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="cart-container" id="cartContainer">
+            <h2>Cart</h2>
+            <div id="cartItems">
+                <!-- Cart items will be displayed here -->
+            </div>
+            <div class="cart-total" id="cartTotal">
+                Total: ₱0
+            </div>
+        </div>
+
+        <div class="shipping-info" id="shippingInfo">
+            <h2>Shipping Information</h2>
+            <form>
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+                <div class="form-group">
+                    <div id="totalLabel">Total:</div>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Submit Order</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        let cart = [];
+        let total = 0;
+
+        function addToCart(itemName, price) {
+            cart.push({ name: itemName, price: price });
+            total += price;
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartItemsElement = document.getElementById('cartItems');
+            const cartTotalElement = document.getElementById('cartTotal');
+
+            cartItemsElement.innerHTML = '';
+            cart.forEach(item => {
+                const itemElement = document.createElement('div');
+                itemElement.classList.add('cart-item');
+                itemElement.innerHTML = `
+                    <p>${item.name}</p>
+                    <p>₱${item.price}</p>
+                `;
+                cartItemsElement.appendChild(itemElement);
+            });
+
+            cartTotalElement.textContent = `Total: ₱${total}`;
+            updateTotalLabel();
+        }
+
+        function updateTotalLabel() {
+            const totalLabelElement = document.getElementById('totalLabel');
+            totalLabelElement.textContent = `Total: ₱${total}`;
+        }
+    </script>
+
+    <script src="java.js"></script>
+</body>
+</html>
